@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jsonJava">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../ultilits/jsonJava" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

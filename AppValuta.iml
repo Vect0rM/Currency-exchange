@@ -23,5 +23,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="jsonJava" level="project" />
   </component>
 </module>
