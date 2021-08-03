@@ -34,6 +34,11 @@
                <Font name="Arial Bold" size="24.0" />
             </font>
          </Text>
+         <Text fx:id="Date_Ex" fill="RED" layoutX="109.0" layoutY="295.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="364.0">
+            <font>
+               <Font name="Arial Bold" size="24.0" />
+            </font>
+         </Text>
       </AnchorPane>
       <Label contentDisplay="CENTER" layoutX="163.0" layoutY="28.0" prefHeight="39.0" prefWidth="321.0" text="Курс валют мира">
          <font>

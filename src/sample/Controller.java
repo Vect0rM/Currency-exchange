@@ -26,6 +26,9 @@ public class Controller {
     private Text Exchange_Rates;
 
     @FXML
+    private Text Date_Ex;
+
+    @FXML
     void initialize() {
         Finder.setOnAction(event -> {
             String getRates = Input_money.getText().trim().toLowerCase(Locale.ROOT);
@@ -36,13 +39,16 @@ public class Controller {
                     if (!output.isEmpty()) {
                         JSONObject object = new JSONObject(output);
                         Exchange_Rates.setText("В евро: " + object.getJSONObject("rates").getDouble(Currency().get(getRates)));
+                        Date_Ex.setText("Курс на: " + object.getString( "date"));
                     }
                 } else {
                     Exchange_Rates.setText("Неверная валюта");
+                    Date_Ex.setText("");
                 }
             }
         });
     }
+
     public Map<String, String> Currency(){
         Map<String, String> CurrencyValue = new HashMap<>();
         CurrencyValue.put("доллар" , "USD");
@@ -50,6 +56,7 @@ public class Controller {
         CurrencyValue.put("рубль" , "RUB");
         return CurrencyValue;
     }
+
     private static String getUrlContent(String urlAddress) {
         StringBuilder content = new StringBuilder();
 
