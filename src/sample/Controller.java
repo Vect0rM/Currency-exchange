@@ -34,7 +34,7 @@ public class Controller {
             String getRates = Input_money.getText().trim().toLowerCase(Locale.ROOT);
             if (!getRates.equals("")) {
                 if (Currency().containsKey(getRates)) {
-                    String output = getUrlContent("http://api.exchangeratesapi.io/v1/latest?access_key=a641f97d8f5aaa342466d8b62bdd0ebf&format=1");
+                    String output = getUrlContent();
                     System.out.println(output);
                     if (!output.isEmpty()) {
                         JSONObject object = new JSONObject(output);
@@ -57,18 +57,18 @@ public class Controller {
         return CurrencyValue;
     }
 
-    private static String getUrlContent(String urlAddress) {
+    private static String getUrlContent() {
         StringBuilder content = new StringBuilder();
 
         try {
-            URL url = new URL(urlAddress);
+            URL url = new URL("http://api.exchangeratesapi.io/v1/latest?access_key=a641f97d8f5aaa342466d8b62bdd0ebf&format=1");
             URLConnection urlConnection = url.openConnection();
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
             String line;
 
             while ((line = bufferedReader.readLine()) != null) {
-                content.append(line + "\n");
+                content.append(line).append("\n");
             }
             bufferedReader.close();
         } catch (Exception e) {
