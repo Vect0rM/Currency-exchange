@@ -29,7 +29,7 @@
                <Font name="Arial" size="24.0" />
             </font>
          </TextField>
-         <Text fx:id="Exchange_Rates" fill="RED" layoutX="109.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В евро :" wrappingWidth="380.13671875">
+         <Text fx:id="Exchange_Rates" fill="RED" layoutX="109.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В рублях: " wrappingWidth="380.13671875">
             <font>
                <Font name="Arial Bold" size="24.0" />
             </font>
