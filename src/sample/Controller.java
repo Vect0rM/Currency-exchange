@@ -35,7 +35,6 @@ public class Controller {
             if (!getRates.equals("")) {
                 if (Currency().containsKey(getRates)) {
                     String output = getUrlContent();
-                    System.out.println(output);
                     if (!output.isEmpty()) {
                         JSONObject object = new JSONObject(output);
                         Exchange_Rates.setText("В евро: " + object.getJSONObject("rates").getDouble(Currency().get(getRates)));
